@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@300&family=Raleway&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@300&family=Raleway&display=swap");
 
 $font-1: "Raleway", sans-serif;
 $font-2: "Cormorant Upright", sans-serif;
@@ -23,17 +23,24 @@ body {
   color: black;
 }
 
-.container{
+.container {
   display: flex;
   padding: 0 20px;
   height: 90vh;
-  .left{
+  .left {
     flex: 4;
     height: 400px;
     display: flex;
+    flex-wrap: wrap;
+    .description {
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+    }
     justify-content: center;
-    align-items: center;
-    p{
+    flex-direction: column;
+    p {
       font-family: $font-1;
       line-height: 32px;
       letter-spacing: 0.055em;
@@ -41,7 +48,7 @@ body {
       padding-right: 50px;
     }
   }
-  .right{
+  .right {
     flex: 5;
     background-color: aqua;
     background-image: url("../../public/img-right.png");
@@ -50,5 +57,9 @@ body {
     background-size: cover;
     height: 100%;
     border-radius: 7px;
+    img{
+      width: 55px;
+      margin-left: 30vh;
+    }
   }
 }
