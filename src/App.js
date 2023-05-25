@@ -6,6 +6,7 @@ import "./styles/index.scss";
 function App() {
   const [selectedLampe, setSelectedLampe] = useState(0);
   const handleLampeChange = (lampe) => {
+    console.log(lampe);
     setSelectedLampe(lampe);
   };
 
@@ -29,7 +30,9 @@ function App() {
           <Lampes selectedLampe={selectedLampe} onChange={handleLampeChange} />
         </div>
         <div className="right">
-          <img src="./lampe1.png" alt="lampe1" />
+          <img src="/lampe1.png" alt="lampe1" className={selectedLampe===0 ? "active" : ""} />
+          <img src="/lampe2.png" alt="lampe2" className={selectedLampe===1 ? "active" : ""} />
+          <img src="/lampe3.png" alt="lampe3" className={selectedLampe===2 ? "active" : ""} />
         </div>
       </div>
     </div>
