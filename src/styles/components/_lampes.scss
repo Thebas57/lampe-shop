@@ -1,0 +1,36 @@
+.lampes-container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 70%;
+    margin-top: 20px;
+    padding-top: 10px;
+    &::after{
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        height: 110%;
+        width: 140%;
+        left: -20%;
+        top: 0;
+        z-index: -1;
+        background-color: $color-4;
+    }
+    ul{
+        padding-top: 10px;
+        list-style-type: none;
+        span{
+            font-weight: 800;
+        }
+        li{
+            padding-bottom: 12px;
+        }
+    }
+    img{
+        position: absolute;
+        height: 200px;
+        left: 102%;
+        top: -7%;
+    }
+}

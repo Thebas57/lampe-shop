@@ -23,13 +23,14 @@ const Lampes = ({ selectedLampe, onChange }) => {
   };
 
   return (
-    <div>
-      <h1>Choisissez une option :</h1>
-      <div>
-        <button onClick={() => onChange(0)}>Option 1</button>
-        <button onClick={() => onChange(1)}>Option 2</button>
-      </div>
-      <p>Vous avez choisi : {lampes[selectedLampe].material}</p>
+    <div className="lampes-container">
+      <ul>
+        <li><span>Matérial : </span>{lampes[selectedLampe].material}</li>
+        <li><span>Dimensions (cm) : <br /></span>{lampes[selectedLampe].dim}</li>
+        <li><span>Net Weight : </span>{lampes[selectedLampe].weight}</li>
+        <li><span>Electrification : <br /></span>{lampes[selectedLampe].elec}</li>
+      </ul>
+      <img src="./lampe1.png" alt="lampe" />
     </div>
   );
 };
