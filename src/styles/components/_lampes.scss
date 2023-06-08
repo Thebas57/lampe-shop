@@ -1,3 +1,11 @@
+.lampes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100%;
+}
+
 .lampes-container{
     position: relative;
     z-index: 1;
@@ -5,7 +13,10 @@
     align-items: center;
     height: 70%;
     margin-top: 20px;
-    padding-top: 10px;
+    padding-top: 18px;
+    font-family: $font-3;
+    font-size: 14px;
+    padding-right: 30px;
     &::after{
         position: absolute;
         content: "";
@@ -18,7 +29,7 @@
         background-color: $color-4;
     }
     ul{
-        padding-top: 10px;
+        padding-top: 15px;
         list-style-type: none;
         span{
             font-weight: 800;
@@ -30,7 +41,7 @@
     img{
         position: absolute;
         height: 200px;
-        left: 102%;
+        left: 80%;
         top: -7%;
     }
 }
